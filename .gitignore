@@ -1,3 +1,5 @@
 boilerplate_html5/
 database/
 application/config/
+themes/
+public/index.php
