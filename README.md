@@ -21,4 +21,4 @@ Only the public directory should be made public (inside /var/www/ if using apach
 
 ## Further Reading
 
- - [License](license.md)
+ - [License](LICENSE)
