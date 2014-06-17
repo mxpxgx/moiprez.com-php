@@ -2,10 +2,13 @@
 
 class Home extends CI_Controller {
 
-    public function index()
-    {
-        $this->load->view('home');
-    }
+	public function index()
+	{
+		$this->twig->display(
+				'base',
+				'products' => 'Moises' 
+			);
+	}
 
 }
 
