@@ -1,5 +1,7 @@
 boilerplate_html5/
 database/
-application/config/
+application/config/*.php
+!application/config/twig.php
 themes/
 public/index.php
+application/cache
