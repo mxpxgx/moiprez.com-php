@@ -1,0 +1,33 @@
+{% extends "templates/base.html.twig" %}
+
+{% block title %}{{ parent() }} - Home{% endblock %}
+
+{% block header %}{{ parent() }}{% endblock %}
+
+{% block content %}
+
+<div id="profile">
+    <h2>Moisés Pérez</h2>
+    <p class="important">
+        Software Engineer, MSc in Computer Science.
+    </p>
+    <p>E-Mail: <a href="mailto:moises@moiprez.com">moises@moiprez.com</a></p>
+</div>
+
+<div id="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li>ESNM</li>
+        <li>InCense</li>
+    </ul>
+</div>
+
+<div id="publications">
+    <h2>Academic Publications</h2>
+    <ul>
+        <li>IEEE</li>
+        <li>UCAmI</li>
+    </ul>
+</div>
+
+{% endblock %}

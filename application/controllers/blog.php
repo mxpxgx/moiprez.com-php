@@ -5,8 +5,10 @@ class Blog extends CI_Controller {
 	public function index()
 	{
 		$this->twig->display(
-				'base.html.twig',
-				array('name' => 'Moises')
+				'blog.html.twig',
+				array(
+					'name' => 'Moises',
+					'base_url' => base_url())
 			);
 	}
 

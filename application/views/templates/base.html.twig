@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}MoiPrez.com{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="{{base_url}}static/css/normalize.css">
+
+        {% block css %}
+        <link rel="stylesheet" href="{{base_url}}static/css/main.css">
+        {% endblock %}
+
+        {% block js_top %}{% endblock %}
+        <script src="{{base_url}}static/js/vendor/modernizr-2.6.2.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+
+            {% block header %}
+            <h1>MoiPrez.com</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            {% endblock %}
+
+        </header>
+
+        <div id="content">
+
+            {% block content %}        
+            <!-- Add your site or application content here -->
+            <p>Hello world! This is HTML5 Boilerplate. {{name}}</p>
+            {% endblock %}
+
+        </div>
+
+        <footer>
+
+            {% block footer %}
+            MoiPrez.com © 2010-2012 by Moises Perez
+            {% endblock %}
+
+        </footer>
+
+        {% block js_bottom %}
+
+        {% include "templates/js/jquery.html" %}
+
+        {% include "templates/js/analytics.html" %}
+
+        {% endblock %}
+
+    </body>
+</html>

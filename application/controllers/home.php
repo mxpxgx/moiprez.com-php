@@ -5,8 +5,10 @@ class Home extends CI_Controller {
 	public function index()
 	{
 		$this->twig->display(
-				'base',
-				'products' => 'Moises' 
+				'home.html.twig',
+				array(
+					'name' => 'Moises',
+					'base_url' => base_url())
 			);
 	}
 
