@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteBase /~mxpxgx/moiprez.com/
+RewriteCond $1 !^(index\.php|static|robots\.txt|favicon\.ico)
+RewriteRule ^(.*)$ index.php/$1 [L]
