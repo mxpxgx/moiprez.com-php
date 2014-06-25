@@ -26,45 +26,27 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header>
+        {% block header %}
+            {% include "templates/header.html.twig" %}
+        {% endblock %}
 
-            {% block header %}
-            <h1>MoiPrez.com</h1>
-            <nav class="menu">
-                <ul>
-                    <li><a href="home.html">Home</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            {% endblock %}
+        {% block menu %}
+            {% include "templates/menu.html.twig" %}
+        {% endblock %}
 
-        </header>
+        {% block content %}        
+        <!-- Add your site or application content here -->
+        <p>Hello world! This is HTML5 Boilerplate. {{name}}</p>
+        {% endblock %}
 
-        <div id="content">
-
-            {% block content %}        
-            <!-- Add your site or application content here -->
-            <p>Hello world! This is HTML5 Boilerplate. {{name}}</p>
-            {% endblock %}
-
-        </div>
-
-        <footer>
-
-            {% block footer %}
-            MoiPrez.com © 2010-2012 by Moises Perez
-            {% endblock %}
-
-        </footer>
-
-        {% block js_bottom %}
+        {% block footer %}
+            {% include "templates/footer.html.twig" %}
+        {% endblock %}
 
         {% include "templates/js/jquery.html" %}
-
-        {% include "templates/js/analytics.html" %}
-
+        {% block js_bottom %}
         {% endblock %}
+        {% include "templates/js/analytics.html" %}
 
     </body>
 </html>
